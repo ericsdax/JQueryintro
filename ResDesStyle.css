@@ -1,0 +1,46 @@
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery-item{
+    flex: 1;
+    min-width: 100px;
+    margin: 10px;
+    transition: .5s all;
+    background-size: contain;
+    width: 0; 
+    height: 0; 
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid green;
+}
+
+.gallery-item:hover{
+    flex: 2;
+    height: 230px;
+    background-color: cadetblue;
+    border-left: 5px solid green;
+    transition: .5s all;
+    background-size: contain;
+}
+
+.gallery-item:first-child{
+    background-image: url(http://s3.crackedcdn.com/blogimages/2010/01/megamansprite.jpg);
+}
+
+.gallery-item:second-child{
+    background-image: url(https://cdn.instructables.com/FYG/AKTN/GLAMQ844/FYGAKTNGLAMQ844.MEDIUM.jpg);
+}
+
+.gallery-item:third-child{
+    background-image: url(https://s-media-cache-ak0.pinimg.com/236x/4e/07/29/4e072998dc17bc80841e8931b71643e5.jpg);
+}
+
+.gallery-item:fourth-child{
+    background-image: url(http://orig07.deviantart.net/c8d0/f/2014/312/0/2/deathstroke_8_bit_by_sonikuu4-d85rgwk.png);
+}
+
+@media (max-width: 600px){
+    
+}

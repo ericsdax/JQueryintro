@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <title>Forms</title>
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    </head>
+    
+    <body>
+        <form>
+            <p>This is a form.</p>
+            <p></p>
+        </form>
+        
+        Text Input: <input type="text">
+        <br><br>
+        Text Area: <textarea></textarea>
+        <br><br>
+        Radio Button: <input type="radio">
+        <br><br>
+        Buttons: <input type="submit"> <input type="reset"> <input type="button" value="Click Here!"> <button>This is also a button.</button>
+        <br><br>
+        Checkbox: <input type="checkbox">
+        <br><br>
+        File Selector: <input type="file">
+        <br><br>
+        Range: <input type="range">
+        <br><br>
+        Color Picker: <input type="color">
+        <br><br>
+        Password: <input type="password">
+        <br><br>
+        Select (Dropdown Menu): 
+        <select>
+            <option value="Elephants">Elephants</option>
+            <option value="Whales">Whales</option>
+            <option value="Starfish">Starfish</option>
+            <option value="Human">Human</option>
+        </select>
+        <hr>
+        
+        <form action="javascript:submitForm()">
+            <fieldset>
+            <h3>Sign Up Now!</h3>
+            <input type="text" name="firstname" placeholder="First Name">
+            <input type="text" name="lastname" placeholder="Last Name">
+            <br><br>
+            <input type="radio" name="male" value="Male"> Male
+            <br>
+            <input type="radio" name="female" value="Female"> Female
+            <br>
+            <input type="radio" name="other" value="Other"> Other
+            </fieldset>
+            
+            <input type="submit">
+        </form>
+        
+        <script>
+            function submitForm(){
+                confirm("Are you sure you want to continue, " +  $("input[name='firstname']").val() + "?");
+            }
+        </script>
+        
+    </body>
+    
+    
+</html>

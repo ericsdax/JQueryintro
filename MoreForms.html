@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <title>More Forms</title>
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    </head>
+    
+    <body>
+        <h1>More Forms</h1>
+        
+        <form action="javascript:submitForm()">
+            <fieldset>
+                <h2>Create Account</h2>
+                <input type="text" name="firstname" placeholder="First Name">
+                <input type="text" name="lastname" placeholder="Last Name">
+                <p>Gender:</p>
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> Female
+                <input type="radio" name="gender" value="other" checked> Other
+                <p>I am a(n)...</p>
+                <select>
+                    <option value="seeking a studio">Artist</option>
+                    <option value="providing a studio">Studio</option>
+                </select>
+                <br>
+                Choose a color: <input type="color" name="userColor">
+                <br><hr>
+                <input type="submit">
+            </fieldset>
+        </form>
+        
+        <p>Hi, <span id="username">[Your Name]</span>! Thank you for signing up for StudiosNearMe. We see that you are <span id="action">[Action]</span>. Let us help!</p>
+        
+        <script>
+            function submitForm(){
+                
+                var prefix = "";
+                var gender = $("input[name='gender']:checked").val();
+                if(gender=="male"){
+                    prefix="Mr."
+                }
+                if(gender=="female"){
+                    prefix="Ms."
+                }
+                
+                var fullname = $("input[name='firstname']").val() + " " + $("input[name='lastname']").val();
+                $("#username").html(prefix + " " + fullname);
+                
+                var action = $("option").val();
+                $("#action").html(action);
+                
+                var userColor = $("input[name='userColor']").val();
+                
+                $("body").css("background-color", userColor);
+            }
+        </script>
+        
+    </body>
+    
+    
+</html>

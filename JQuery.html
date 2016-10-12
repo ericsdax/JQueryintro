@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Intro to JQuery</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <style>
+    
+    .colorDivs {
+        cursor: crosshair;
+    }
+    
+    div {
+        font-size: xx-large;
+        height: 50px;
+        border-top: solid grey 2px;
+    }
+    
+    #indigoDiv {
+        border-bottom: solid grey 2px;
+    }
+    
+    .colorDivs {
+        display: none;
+    }
+    
+    .button {
+        display: inline-block;
+        border-radius: 4px;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        width:300px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+    }
+    
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+    
+    .button span:after {
+        content: '»';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+    
+    .button:hover span {
+        padding-right: 25px;
+    }
+    
+    .button:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+</style>
+
+    <script>
+        
+        var time = ".5s all";
+        
+        $(document).ready(function(){
+            console.log("Hey there");
+            
+            setInterval(function(){
+                
+                var r = Math.floor(Math.random() * 255);
+                var g = Math.floor(Math.random() * 255);
+                var b = Math.floor(Math.random() * 255);
+                console.log(r);
+                $(".button").css("background-color", "rgb("+r+","+g+","+b+")");
+                $(".button").css("transition", "3s all");
+                
+            }, 1500);
+
+            $(".button").click(function(){
+                $(this).parent().find(".colorDivs").slideToggle();
+            });
+            
+            $("#pinkDiv").hover(function(){
+                $("body").css("background-color", "salmon");
+                $("body").css("transition", time);
+                $("#pinkDiv").css("background-color", "rgba(0,0,0,0.2)");
+            },function(){
+                $("body").css("background-color", "white");
+                $("div").css("background-color", "rgba(0,0,0,0)");
+            });
+            
+            $("#redDiv").hover(function(){
+                $("body").css("background-color", "red");
+                $("body").css("transition", time);
+                $("#redDiv").css("background-color", "rgba(0,0,0,0.2)");
+            },function(){
+                $("body").css("background-color", "white");
+                $("div").css("background-color", "rgba(0,0,0,0)");
+            });
+            
+            $("#orangeDiv").hover(function(){
+                $("body").css("background-color", "orange");
+                $("body").css("transition", time);
+                $("#orangeDiv").css("background-color", "rgba(0,0,0,0.2)");
+            },function(){
+                $("body").css("background-color", "white");
+                $("div").css("background-color", "rgba(0,0,0,0)");
+            });
+            
+            $("#yellowDiv").hover(function(){
+                $("body").css("background-color", "yellow");
+                $("body").css("transition", time);
+                $("#yellowDiv").css("background-color", "rgba(0,0,0,0.2)");
+            },function(){
+                $("body").css("background-color", "white");
+                $("div").css("background-color", "rgba(0,0,0,0)");
+            });
+            
+            $("#greenDiv").hover(function(){
+                $("body").css("background-color", "chartreuse");
+                $("body").css("transition", time);
+                $("#greenDiv").css("background-color", "rgba(0,0,0,0.2)");
+            },function(){
+                $("body").css("background-color", "white");
+                $("div").css("background-color", "rgba(0,0,0,0)");
+            });
+            
+            $("#aquaDiv").hover(function(){
+                $("body").css("background-color", "aqua");
+                $("body").css("transition", time);
+                $("#aquaDiv").css("background-color", "rgba(0,0,0,0.2)");
+            },function(){
+                $("body").css("background-color", "white");
+                $("div").css("background-color", "rgba(0,0,0,0)");
+            });
+            
+            $("#blueDiv").hover(function(){
+                $("body").css("background-color", "dodgerblue");
+                $("body").css("transition", time);
+                $("#blueDiv").css("background-color", "rgba(0,0,0,0.2)");
+            },function(){
+                $("body").css("background-color", "white");
+                $("div").css("background-color", "rgba(0,0,0,0)");
+            });
+            
+            $("#purpleDiv").hover(function(){
+                $("body").css("background-color", "mediumslateblue");
+                $("body").css("transition", time);
+                $("#purpleDiv").css("background-color", "rgba(0,0,0,0.2)");
+            },function(){
+                $("body").css("background-color", "white");
+                $("div").css("background-color", "rgba(0,0,0,0)");
+            });
+            
+             $("#violetDiv").hover(function(){
+                $("body").css("background-color", "rebeccapurple");
+                $("body").css("transition", time);
+                $("#violetDiv").css("background-color", "rgba(0,0,0,0.2)");
+            },function(){
+                $("body").css("background-color", "white");
+                 $("div").css("background-color", "rgba(0,0,0,0)");
+            });
+            
+            $("#indigoDiv").hover(function(){
+                $("body").css("background-color", "indigo");
+                $("body").css("transition", time);
+                $("#indigoDiv").css("background-color", "rgba(0,0,0,0.2)");
+            },function(){
+                $("body").css("background-color", "white");
+                $("div").css("background-color", "rgba(0,0,0,0)");
+            });
+            
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <h1>INTRO TO JQUERY</h1>
+    <button class="button" style="vertical-align:middle"><span>Taste the Rainbow </span></button>
+
+        <div id="pinkDiv" class="colorDivs">Pink.</div>
+        <div id="redDiv" class="colorDivs">Red.</div>
+        <div id="orangeDiv" class="colorDivs">Orange.</div>
+        <div id="yellowDiv" class="colorDivs">Yellow.</div>
+        <div id="greenDiv" class="colorDivs">Green.</div>
+        <div id="aquaDiv" class="colorDivs">Light Blue.</div>
+        <div id="blueDiv" class="colorDivs">Blue.</div>
+        <div id="purpleDiv" class="colorDivs">Purple.</div>
+        <div id="violetDiv" class="colorDivs">Violet.</div>
+        <div id="indigoDiv" class="colorDivs">Indigo.</div>
+
+</body>
+
+</html>
